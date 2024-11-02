@@ -1,0 +1,39 @@
+if(C6H6<10ppm) 벤젠 농도가 좋을 때
+  servo.write(angle); 환풍기(창문)를 닫음
+  digitalWrite(Dir1Pin_A,LOW);
+  digitalWrite(Dir2Pin_A,LOW);
+  digitalWrite(SpeedPin_A,0); 환풍 팬 작동 off
+
+if(C6H6>10ppm) 벤젠 농도가 높을 때
+  servo.write(angle);
+  digitalWrite(Dir1Pin_A,HIGH);
+  digitalWrite(Dir2Pin_A,LOW);
+  digitalWrite(Speedin_A,255); 환풍기 최대로 on
+
+if(CO<20ppm) 일산화탄소 농도가 좋을 때
+  servo.write(angle); 환풍기(창문)를 닫음
+  digitalWrite(Dir1Pin_A,LOW);
+  digitalWrite(Dir2Pin_A,LOW);
+  digitalWrite(SpeedPin_A,0); 환풍 팬 작동 off
+
+if(CO>10ppm) 일산화탄소 농도가 높을 때
+  servo.write(angle);
+  digitalWrite(Dir1Pin_A,HIGH);
+  digitalWrite(Dir2Pin_A,LOW);
+  digitalWrite(Speedin_A,255); 환풍기 최대로 on
+
+if(NH4<5ppm) 암모니아 농도가 좋을 때
+  servo.write(angle); 환풍기(창문)를 닫음
+  digitalWrite(Dir1Pin_A,LOW);
+  digitalWrite(Dir2Pin_A,LOW);
+  digitalWrite(SpeedPin_A,0); 환풍 팬 작동 off
+
+if(NH4>5ppm) 암모니아 농도가 높을 때
+  servo.write(angle);
+  digitalWrite(Dir1Pin_A,HIGH);
+  digitalWrite(Dir2Pin_A,LOW);
+  digitalWrite(Speedin_A,255); 환풍기 최대로 on
+
+
+
+  
